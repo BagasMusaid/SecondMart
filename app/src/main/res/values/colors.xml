@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#16a34a</color>
+    <color name="slate">#64748b</color>
+    <color name="slate100">#f1f5f9</color>
+    <color name="primary">#D9D9D9</color>
+    <color name="slate600">#475569</color>
+    <color name="slate300"> #cbd5e1</color>
+<!--    color logo -->
+    <color name="orange">#FF7A00</color>
+    <color name="slate700">#172554</color>
+    <color name="cbanner">#0D0140</color>
+</resources>

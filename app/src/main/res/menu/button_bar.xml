@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:id="@+id/Home"
+        android:icon="@drawable/baseline_home_24">
+    </item>
+    <item
+        android:title="chat"
+        android:id="@+id/chat"
+        android:icon="@drawable/chat">
+    </item>
+    <item
+        android:title="Post"
+        android:id="@+id/Post"
+        android:icon="@drawable/post">
+    </item>
+    <item
+        android:title="Stored"
+        android:id="@+id/Stored"
+        android:icon="@drawable/bookmarts">
+    </item>
+</menu>
