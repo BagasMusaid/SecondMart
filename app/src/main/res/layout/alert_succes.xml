@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constrain_succes">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_dialog"
+        android:background="@drawable/custom_bac_alert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/succes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Succes"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingTop="25dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/pbold"
+            app:layout_constraintTop_toTopOf="@id/layout_dialog"/>
+        <TextView
+            android:id="@+id/decSucces"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Berhasil "
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:fontFamily="@font/pmedium"
+            app:layout_constraintTop_toBottomOf="@id/succes"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/centang"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/layout_dialog"
+        app:layout_constraintBottom_toTopOf="@id/layout_dialog"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
