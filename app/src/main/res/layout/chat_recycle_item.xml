@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/foto_profil_chat"
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:src="@drawable/tegar"/>
+       <RelativeLayout
+           android:id="@+id/rl"
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="15dp">
+           <TextView
+               android:id="@+id/name_chat"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Tegar Mallisa"
+               android:layout_marginTop="2dp"
+               android:textStyle="bold"
+               android:fontFamily="@font/pbold"
+               android:textSize="15sp"/>
+           <TextView
+               android:id="@+id/topic_chat"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textSize="12sp"
+               android:layout_marginTop="3dp"
+               android:textColor="@color/chat"
+               android:text="Hallo bagaimana"
+               android:layout_below="@id/name_chat"/>
+
+       </RelativeLayout>
+       <TextView
+           android:id="@+id/notif_chat"
+           android:layout_weight="2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="18dp"
+           android:textColor="@color/orange"
+           android:textStyle="bold"
+           android:textSize="15sp"
+           android:fontFamily="@font/pmedium"
+           android:textAlignment="textEnd"
+           android:text="1"
+           android:layout_toEndOf="@id/name_chat"/>
+
+   </LinearLayout>
+
+</LinearLayout>
