@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:text="Iphone 11 65GB"
                     android:textStyle="bold"
-                    android:textSize="9sp"
+                    android:textSize="11sp"
                     android:fontFamily="@font/pbold"/>
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -91,20 +91,15 @@
                         android:layout_toEndOf="@id/tagar"/>
                 </RelativeLayout>
             </LinearLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:id="@+id/iconSimpan_IV"
-                    android:layout_width="28dp"
-                    android:layout_height="38dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginLeft="-4dp"
-                    android:src="@drawable/icon_bookmart"
-                    app:tint="@color/bookmart" />
-            </RelativeLayout>
+            <ToggleButton
+                android:id="@+id/icon_stored"
+                android:layout_width="28dp"
+                android:layout_height="29dp"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/bookmart_full"
+                android:backgroundTint="@color/bookmart"
+                android:layout_alignParentEnd="true"/>
         </LinearLayout>
     </RelativeLayout>
 

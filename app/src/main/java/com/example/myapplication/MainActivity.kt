@@ -20,12 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val firebaseAuth = FirebaseAuth.getInstance()
-//    val db = Firebase.firestore
-//    val user = hashMapOf(
-//        "first" to "Ada",
-//        "last" to "Lovelace",
-//        "born" to 1815
-//    );
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,17 +28,10 @@ class MainActivity : AppCompatActivity() {
         //Splashscreen
         Thread.sleep(1000)
         installSplashScreen()
-//        val usersCollection = db.collection("users")
-//
-//// Menambahkan data ke koleksi "users"
-//        usersCollection
-//            .add(user)
-//            .addOnSuccessListener { documentReference ->
-//                println("DocumentSnapshot added with ID: ${documentReference.id}")
-//            }
-//            .addOnFailureListener { e ->
-//                println("Error adding document: $e")
-//            }
+
+        val ProfileFragment = profileFragment()
+
+        val fragmentManager : FragmentManager = supportFragmentManager
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser != null) {
             super.onCreate(savedInstanceState)
@@ -56,12 +44,17 @@ class MainActivity : AppCompatActivity() {
                     R.id.Home -> replaceFragment(Home())
                     R.id.chat -> replaceFragment(Search())
                     R.id.Post -> replaceFragment(post())
+                    R.id.Stored -> replaceFragment(stored())
                     else -> {
+
 
                     }
                 }
                 true
             }
+
+
+
         }else {
 
             startActivity(Intent(this, LoginActivity::class.java))
@@ -69,6 +62,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     private fun replaceFragment(fragment: Fragment){
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()

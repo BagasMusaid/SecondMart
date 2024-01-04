@@ -17,6 +17,7 @@ import android.widget.AutoCompleteTextView
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.example.myapplication.Models.Posting_Class
 import com.example.myapplication.databinding.FragmentPostBinding
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.database.DatabaseReference
@@ -83,11 +84,13 @@ class post : Fragment () {
                 imageuri
             )
         }
+//        dropdown category
         autoComplate.setAdapter(adapter)
         autoComplate.onItemClickListener = AdapterView.OnItemClickListener{
             adapterView, view, i, l ->
             val itemSelected = adapterView.getItemIdAtPosition(i)
         }
+//        end dropdown
 
         imageView = view.findViewById(R.id.IV_image)
         textView = view.findViewById(R.id.pilih)

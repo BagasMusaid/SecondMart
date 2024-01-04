@@ -103,7 +103,7 @@
                     android:fontFamily="@font/pmedium"/>
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="58dp"
                     android:layout_marginRight="5dp"
                     app:endIconMode="clear_text"
                     app:boxBackgroundMode="outline"
@@ -115,7 +115,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/name_brg"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:hint="Masukan Nama Barang"
                         android:fontFamily="@font/pmedium"
                         android:textSize="13sp"/>
@@ -161,7 +161,7 @@
                         <AutoCompleteTextView
                             android:id="@+id/autoComplate"
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
+                            android:layout_height="match_parent"
                             android:hint="@string/items_label"
                             android:inputType="none"
                             android:fontFamily="@font/pmedium"
@@ -173,6 +173,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:focusableInTouchMode="true"
+                    android:layout_marginBottom="20dp"
                     android:layout_weight="1">
                     <TextView
                         android:layout_width="match_parent"
@@ -183,7 +184,7 @@
                         android:fontFamily="@font/pmedium"/>
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="55dp"
+                        android:layout_height="58dp"
                         android:layout_marginRight="5dp"
                         app:endIconMode="clear_text"
                         app:boxBackgroundMode="outline"
@@ -210,7 +211,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_marginTop="20dp">
+                    >
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -220,7 +221,7 @@
                         android:fontFamily="@font/pmedium"/>
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:layout_height="55dp"
+                        android:layout_height="58dp"
                         android:layout_marginRight="5dp"
                         app:endIconMode="clear_text"
                         app:boxBackgroundMode="outline"
