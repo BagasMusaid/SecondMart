@@ -12,6 +12,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
 import com.example.myapplication.Extensions.toast
 import com.example.myapplication.Models.Posting_Class
 import com.example.myapplication.Models.stored_class
@@ -28,6 +29,9 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -80,8 +84,6 @@ class Home : Fragment(), View.OnClickListener, LikedOnClickInterface, produk,
         dialog.show()
 
 
-        val profileImage = view.findViewById<ImageView>(R.id.profile_image)
-
 //        start category
         val cardEle: CardView = view.findViewById(R.id.C_elektronik)
         val cardSport: CardView = view.findViewById(R.id.C_Sports)
@@ -125,8 +127,24 @@ class Home : Fragment(), View.OnClickListener, LikedOnClickInterface, produk,
         fullNameTextView.text = "Hai, $username"
 
 
-//        profile
-//        binding.profileImage.setOnClickListener(this)
+        // Muat URL foto profil dari SharedPreferences
+        val profileImageUrl = sharedPreferences?.getString("profileImageUrl", "")
+
+        // Muat foto profil menggunakan Glide
+        if (!profileImageUrl.isNullOrEmpty()) {
+            Glide.with(requireContext())
+                .load(profileImageUrl)
+                .into(binding.profileImage)
+        }
+
+        // Atur teks pada TextView tanggal
+        val tanggalTextView: TextView = view.findViewById(R.id.TV_tanggal)
+        val currentDate = SimpleDateFormat("EEEE, d MMMM", Locale.getDefault()).format(Date())
+        tanggalTextView.text = currentDate
+
+
+//      profile
+        binding.profileImage.setOnClickListener(this)
         binding.iconLocation.setOnClickListener(this)
 
         dataList= ArrayList()
@@ -189,10 +207,10 @@ class Home : Fragment(), View.OnClickListener, LikedOnClickInterface, produk,
 
     override fun onClick(v: View?) {
         when(v?.id){
-//            R.id.profile_image -> run {
-//                val intentProfile = Intent(requireContext(), profileActivity::class.java )
-//                startActivity(intentProfile)
-//            }
+            R.id.profile_image -> run {
+                val intentProfile = Intent(requireContext(), profileActivity::class.java )
+                startActivity(intentProfile)
+            }
             R.id.icon_location -> run{
                 val intentLocation = Intent(requireContext(), locationActivity::class.java)
                 startActivity(intentLocation)
