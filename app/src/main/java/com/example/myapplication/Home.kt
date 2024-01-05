@@ -49,7 +49,7 @@ class Home : Fragment(), View.OnClickListener, LikedOnClickInterface, produk,
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var dataList: ArrayList<Posting_Class>
+    private lateinit var dataList: ArrayList<stored_class>
     private lateinit var adapter: MyAdapter
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: FragmentHomeBinding
@@ -143,7 +143,7 @@ class Home : Fragment(), View.OnClickListener, LikedOnClickInterface, produk,
                     dataList.clear()
 
                     for (itemSnapshot in snapshot.children) {
-                        val dataClass = itemSnapshot.getValue(Posting_Class::class.java)
+                        val dataClass = itemSnapshot.getValue(stored_class ::class.java)
                         if (dataClass != null) {
                             dataList.add(dataClass)
                         }
@@ -200,7 +200,7 @@ class Home : Fragment(), View.OnClickListener, LikedOnClickInterface, produk,
         }
     }
 
-    override fun onClickLike(item: Posting_Class) {
+    override fun onClickLike(item: stored_class) {
         likeDBRef
             .whereEqualTo("uid", auth.currentUser!!.uid)
             .whereEqualTo("name", item.name)
@@ -209,7 +209,7 @@ class Home : Fragment(), View.OnClickListener, LikedOnClickInterface, produk,
                 if (querySnapshot.isEmpty) {
                     // Barang belum disukai sebelumnya, tambahkan ke LikedProducts
                     likeDBRef
-                        .add(stored_class(item.id, auth.currentUser!!.uid, item.name, item.category, item.location, item.condition, item.description, item.imageuri))
+                        .add(stored_class(item.pid, auth.currentUser!!.uid, item.name, item.category, item.location, item.condition, item.description, item.imageuri))
                         .addOnSuccessListener {
                             requireActivity().toast("Postingan Tersimpan")
                         }

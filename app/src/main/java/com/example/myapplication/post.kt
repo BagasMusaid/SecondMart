@@ -61,7 +61,7 @@ class post : Fragment () {
 
 
 
-        val item = listOf("Elektronik","Sport","Fashion","Pets")
+        val item = listOf("Elektronik","Sports","Fashion","Pets")
         val autoComplate : AutoCompleteTextView = view.findViewById(R.id.autoComplate)
         val adapter = ArrayAdapter(requireContext(), R.layout.list_items, item)
 
@@ -154,7 +154,7 @@ class post : Fragment () {
                                 // Sesuaikan durasi tampilan alert sesuai kebutuhan
                                 Handler(Looper.getMainLooper()).postDelayed({
                                     alertDialog.dismiss()
-                                }, 5000)
+                                }, 3000)
 
                                 Toast.makeText(
                                     requireContext(),

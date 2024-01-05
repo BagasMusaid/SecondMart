@@ -7,16 +7,40 @@
     tools:context=".CategoryActivity"
     android:orientation="vertical"
     android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/arrow_back"
+            app:tint="@color/bookmart"/>
+        <EditText
+            android:id="@+id/ET_search"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:drawableLeft="@drawable/search2"
+            android:background="@drawable/edittext_back"
+            android:paddingStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:paddingVertical="10dp"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="20dp"/>
+    </LinearLayout>
     <TextView
         android:id="@+id/tv_cate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:text="buku"
         android:textStyle="bold"
         android:textSize="20dp"
         android:fontFamily="@font/pbold"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="3dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RV_Cate"

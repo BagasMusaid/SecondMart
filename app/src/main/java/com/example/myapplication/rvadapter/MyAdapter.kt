@@ -12,11 +12,12 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.Models.Posting_Class
+import com.example.myapplication.Models.stored_class
 import com.example.myapplication.R
 
 class MyAdapter(
     private val context: android.content.Context,
-    private val dataList: List<Posting_Class>,
+    private val dataList: List<stored_class>,
     private val productClickInterface: produk,
     private val likeClickInterface: LikedOnClickInterface,
     ):RecyclerView.Adapter<MyViewHolder>() {
@@ -75,5 +76,5 @@ interface produk {
 }
 
 interface LikedOnClickInterface{
-    fun onClickLike(item : Posting_Class)
+    fun onClickLike(item : stored_class)
 }
