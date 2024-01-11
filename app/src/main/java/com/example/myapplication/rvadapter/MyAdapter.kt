@@ -34,6 +34,9 @@ class MyAdapter(
         holder.reqLocation.text = currentItem.location
         holder.reqCategory.text = currentItem.category
 
+        holder.itemView.setOnClickListener {
+            productClickInterface.onClickProduct(dataList[position])
+        }
         holder.reqbookmart.setOnClickListener {
             val slate = ContextCompat.getColor(context, R.color.bookmart)
             val orange = ContextCompat.getColor(context, R.color.orange)
@@ -72,7 +75,7 @@ class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
     }
 }
 interface produk {
-    fun onClickProduct(item: Posting_Class)
+    fun onClickProduct(item: stored_class)
 }
 
 interface LikedOnClickInterface{

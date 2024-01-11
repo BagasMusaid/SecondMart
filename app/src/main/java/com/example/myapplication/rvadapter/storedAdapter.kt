@@ -32,7 +32,6 @@ class storedAdapter(
         holder.reqName.text = currentItem.name
         holder.reqLocation.text = currentItem.location
         holder.reqCategory.text = currentItem.category
-        holder.reqbookmart.backgroundTintList = ColorStateList.valueOf(Color.RED)
         holder.reqbookmart.backgroundTintList = ColorStateList.valueOf(orange)
 
 

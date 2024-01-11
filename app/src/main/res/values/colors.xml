@@ -29,6 +29,9 @@
     <color name="layer">#F9F9F9</color>
     <color name="chat">#AAA6B9</color>
 
+    <color name="icon_detail">#313131</color>
+
+
 
 
 </resources>

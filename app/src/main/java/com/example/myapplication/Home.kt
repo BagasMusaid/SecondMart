@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -244,8 +245,13 @@ class Home : Fragment(), View.OnClickListener, LikedOnClickInterface, produk,
             }
     }
 
-    override fun onClickProduct(item: Posting_Class) {
+    override fun onClickProduct(item: stored_class) {
+        val productId = item.name
 
+        // Meneruskan ID produk ke aktivitas
+        val intent = Intent(requireContext(), DetaillActivity::class.java)
+        intent.putExtra("productId", productId)
+        startActivity(intent)
     }
 
 
