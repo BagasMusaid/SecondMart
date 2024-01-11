@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetaillActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/arrow_back"
+            app:tint="@color/bookmart"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Detail Produk"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/pbold"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:cardCornerRadius="15dp">
+            <ImageView
+                android:id="@+id/image_det"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/tegar"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Iphone 11 pro Max"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="@font/pmedium"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Deskripsi : "
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:fontFamily="@font/pmedium"/>
+        <TextView
+            android:id="@+id/descrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="barang baru beli "
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/bookmart"
+            android:fontFamily="@font/pmedium"
+            android:layout_marginLeft="47dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.1"
+                android:layout_marginLeft="-8dp"
+                android:src="@drawable/wallet"
+                app:tint="@color/icon_detail" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="4dp"
+                android:text="Kondisi : "
+                android:textColor="@color/icon_detail"
+                android:fontFamily="@font/pmedium"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/kondisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="-20dp"
+                android:textColor="@color/bookmart"
+                android:text="bekas"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/pmedium"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/location"
+                app:tint="@color/icon_detail"/>
+            <TextView
+                android:id="@+id/lokasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="4dp"
+                android:text="Sleman, Jogjakarta"
+                android:textColor="@color/icon_detail"
+                android:fontFamily="@font/pmedium"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CHAT"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/custom_button"
+                android:layout_marginRight="10dp"/>
+            <ImageView
+                android:layout_width="80dp"
+
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/icon_bookmart"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
