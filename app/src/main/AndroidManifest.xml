@@ -43,6 +43,9 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailChat"
+            android:exported="false" />
+        <activity
             android:name=".profileActivity"
             android:exported="false" />
         <activity

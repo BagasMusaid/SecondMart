@@ -149,7 +149,7 @@
                app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintTop_toTopOf="parent"
-               android:layout_marginLeft="20dp"
+               android:layout_marginLeft="23dp"
                android:layout_marginTop="-60dp"
                android:fontFamily="@font/pmedium"
                android:textStyle="bold"
@@ -163,7 +163,7 @@
                app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintTop_toBottomOf="@id/satu"
-               android:layout_marginLeft="20dp"
+               android:layout_marginLeft="23dp"
                android:text="Barterin Aja"
                android:textStyle="bold"
                android:fontFamily="@font/pbold"
@@ -368,7 +368,8 @@
                android:id="@+id/RV_card"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:scrollbars="none"/>
+               android:scrollbars="none"
+               android:layout_marginTop="1dp"/>
        </LinearLayout>
    </RelativeLayout>
 

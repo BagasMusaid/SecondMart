@@ -3,17 +3,11 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.view.inputmethod.InputBinding
-import android.widget.ListView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.myapplication.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.firestore
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         Thread.sleep(1000)
         installSplashScreen()
 
-        val ProfileFragment = profileFragment()
 
         val fragmentManager : FragmentManager = supportFragmentManager
         val firebaseUser = firebaseAuth.currentUser
@@ -42,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             binding.btmNavigasi?.setOnItemSelectedListener {menuItem->
                 when(menuItem.itemId){
                     R.id.Home -> replaceFragment(Home())
-                    R.id.chat -> replaceFragment(Search())
+                    R.id.chat -> replaceFragment(ChatActivity())
                     R.id.Post -> replaceFragment(post())
                     R.id.Stored -> replaceFragment(stored())
                     else -> {

@@ -113,7 +113,6 @@ class stored : Fragment(), ProductOnClickInterface, Like {
     }
 
     override fun onClickProduct(item: stored_class) {
-        TODO("Not yet implemented")
     }
 
     override fun onclike(item: stored_class) {

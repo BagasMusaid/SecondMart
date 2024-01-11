@@ -14,17 +14,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Disimpan"
+            android:text="Favorit"
             android:textStyle="bold"
-            android:textSize="28sp"
+            android:textSize="22sp"
             android:textAlignment="center"
-            android:fontFamily="@font/pbold"/>
+            android:fontFamily="@font/pbold"
+            android:layout_marginTop="15dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/RV_stored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="17dp"/>
     </LinearLayout>
 
 

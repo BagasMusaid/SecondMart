@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailChat">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:padding="20dp"
+      android:layout_marginBottom="30dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="25dp">
+
+      <!-- Back Button -->
+      <LinearLayout
+          android:layout_width="15dp"
+          android:layout_height="61dp"
+          android:layout_marginTop="2dp"
+          android:layout_marginRight="13dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Back Button"
+            android:src="@drawable/ic_back_arrow" />
+      </LinearLayout>
+
+      <!-- Profile Image -->
+      <LinearLayout
+          android:layout_width="59dp"
+          android:layout_height="61dp"
+          android:layout_marginTop="2dp"
+          android:layout_marginRight="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/detailImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/gojo"
+            app:civ_border_color="#FF000000" />
+      </LinearLayout>
+
+      <!-- Name and Status -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_marginTop="5dp"
+          android:layout_weight="1">
+        <TextView
+            android:id="@+id/detailNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textStyle="normal"
+            android:fontFamily="@font/pbold"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle=""
+            android:textColor="@color/slate600"
+            android:layout_marginTop="-5dp"
+            android:textSize="13sp"
+            android:text="online"
+            android:fontFamily="@font/pmedium"/>
+      </LinearLayout>
+    </LinearLayout>
+
+    <!-- RecyclerView for Chat Messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detailPesan"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="16dp" />
+
+    <!-- Message Input Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <!-- Message Input -->
+      <EditText
+          android:id="@+id/editText"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:background="@drawable/edittext_background"
+          android:fontFamily="@font/pmedium"
+          android:hint="Ketik pesan"
+          android:padding="16dp" />
+
+      <!-- Camera Button -->
+      <ImageButton
+          android:id="@+id/buttonCamera"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginBottom="8dp"
+          android:background="@color/white"
+          android:contentDescription="Camera Button"
+          android:src="@drawable/ic_camera" />
+
+      <!-- Send Button -->
+      <ImageButton
+          android:id="@+id/buttonSend"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:background="@drawable/send_background"
+          android:contentDescription="Send Button"
+          android:src="@drawable/send_btn" />
+    </LinearLayout>
+
+  </LinearLayout>
+
+</FrameLayout>

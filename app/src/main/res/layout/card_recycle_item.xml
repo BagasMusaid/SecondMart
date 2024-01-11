@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="5dp"
     android:layout_margin="2dp"
     app:cardElevation="2dp">
     <RelativeLayout
@@ -12,9 +12,9 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/image_RV"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="155dp"
             android:layout_margin="10dp"
-            app:cardCornerRadius="5dp">
+            app:cardCornerRadius="4dp">
             <ImageView
                 android:id="@+id/IV_Post"
                 android:layout_width="match_parent"
@@ -41,54 +41,41 @@
                     android:layout_height="wrap_content"
                     android:text="Iphone 11 65GB"
                     android:textStyle="bold"
-                    android:textSize="11sp"
+                    android:textSize="15sp"
                     android:fontFamily="@font/pbold"/>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="-3dp">
-                    <ImageView
-                        android:id="@+id/icon_IV"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginLeft="-2dp"
-                        android:src="@drawable/location"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        app:tint="@color/orange"/>
+
                     <TextView
                         android:id="@+id/TV_Location"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toEndOf="@id/icon_IV"
-                        android:textSize="7sp"
+                        android:textSize="11sp"
                         android:fontFamily="@font/pmedium"
-                        android:textColor="@color/orange"
-                        android:layout_marginTop="3dp"
+                        android:textColor="@color/bookmart"
                         android:text="Kalikotes, Klaten"/>
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:paddingLeft="5dp">
+                    android:layout_height="match_parent">
                     <TextView
                         android:id="@+id/tagar"
                         android:layout_width="20dp"
                         android:layout_height="wrap_content"
                         android:text="#"
-                        android:textSize="8sp"
-                        android:textStyle="italic"
-                        android:textColor="@color/slate600"/>
+                        android:textSize="10sp"
+                        android:textColor="@color/orange" />
                     <TextView
                         android:id="@+id/TV_Category"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Elektronik"
-                        android:textSize="8sp"
-                        android:textStyle="italic"
+                        android:textSize="10sp"
                         android:layout_marginLeft="-12dp"
-                        android:textColor="@color/slate600"
-                        android:layout_toEndOf="@id/tagar"/>
+                        android:textColor="@color/orange"
+                        android:layout_toEndOf="@id/tagar" />
                 </RelativeLayout>
             </LinearLayout>
             <ToggleButton

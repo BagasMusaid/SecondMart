@@ -1,9 +1,11 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.myapplication.databinding.ActivityLocationBinding
@@ -33,7 +35,15 @@ class locationActivity : AppCompatActivity(), OnMapReadyCallback {
         //val
         getCurrentLocationUser()
 
+        val imageBack: ImageView = findViewById(R.id.image_back)
+        imageBack.setOnClickListener {
+
+            finish()
+        }
+
     }
+
+
     private fun getCurrentLocationUser(){
         if(ActivityCompat.checkSelfPermission(
                 this,android.Manifest.permission.ACCESS_FINE_LOCATION)!=
@@ -81,7 +91,7 @@ class locationActivity : AppCompatActivity(), OnMapReadyCallback {
         val markerOptions=MarkerOptions().position(latLng).title("Current Location")
 
         mMap?.animateCamera(CameraUpdateFactory.newLatLng(latLng))
-        mMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12F))
+        mMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15F))
         mMap?.addMarker(markerOptions)
 
     }
